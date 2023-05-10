@@ -8,7 +8,7 @@ define([
         $.validator.addMethod(
             'postcode-validation',
             function (v) {
-                return $.mage.isEmptyNoTrim(v) || /[0-9]/.test(v);
+                return $.mage.isEmptyNoTrim(v) || !/[^\d]/.test(v);
             },
             $.mage.__('Magenest Message - Please enter numbers for the postcode field.')
         );
@@ -19,7 +19,7 @@ define([
         validator.addRule(
             'postcode-validation',
             function (v) {
-                return $.mage.isEmptyNoTrim(v) || /[0-9]/.test(v);
+                return $.mage.isEmptyNoTrim(v) || !/[^\d]/.test(v);
             },
             $.mage.__('Magenest Message - Please enter numbers for the postcode field.')
         );

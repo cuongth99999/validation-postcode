@@ -1,0 +1,17 @@
+<?php
+
+/** @var $block \Magenest\Privacy\Block\RegisterForm */
+?>
+<div class="field tcagreecreateaccount required">
+    <div class="cms_block" style="overflow: scroll; height: 250px">
+        <?php echo $block->getHtmlBlock() ?>
+    </div>
+    <?php if($block->getHtmlBlock() != ""){ ?>
+        <div class="control">
+            <input type="checkbox" id="tcagreecreateaccount" name="tcagreecreateaccount" data-validate="{required:true}" aria-required="true" class="input-checkbox checkbox required" value="">
+            <label for="tcagreecreateaccount" class="label">
+                <?= __('I agree to the above personal information processing') ?>
+            </label>
+        </div>
+    <?php } ?>
+</div>
